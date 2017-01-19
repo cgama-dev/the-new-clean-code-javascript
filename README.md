@@ -120,6 +120,20 @@ locations.forEach((location) => {
   dispatch(location);
 });
 ```
+
+**Melhor:**
+```javascript
+const locations = ['Austin', 'New York', 'San Francisco']
+
+const doStuff = (element, index) => {}
+const doSomeOtherStuff = (element, index) => {}
+const dispatchLocation = (accumulator, current) => {}
+
+const locationsAll = locations.map(doStuff)
+                              .map(doSomeOtherStuff)
+                              .reduce(dispatchLocation)
+});
+```
 **[⬆ voltar ao topo](#Índice)**
 
 ### Não adicione contextos desnecessários
