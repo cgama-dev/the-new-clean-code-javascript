@@ -263,6 +263,23 @@ function isClientActive(client) {
   return clientRecord.isActive();
 }
 ```
+
+**Melhor:**
+```javascript
+const emailClients = (clients) =>
+  clients
+    .filter(isClientActive)
+    .map(getEmail);
+
+
+const getEmail = (client) => client.email
+
+const isClientActive = (client) => 
+  database
+    .lookup(client)
+    .isActive()
+
+```
 **[⬆ voltar ao topo](#Índice)**
 
 ### Nomes de funções devem dizer o que elas fazem
