@@ -215,6 +215,23 @@ createMenu({
 });
 
 ```
+
+**Melhor:**
+```javascript
+function createMenu(config) {
+  // ...
+}
+
+const config = {
+  title: 'Foo',
+  body: 'Bar',
+  buttonText: 'Baz',
+  cancellable: true
+}
+
+createMenu(config)
+
+```
 **[⬆ voltar ao topo](#Índice)**
 
 
