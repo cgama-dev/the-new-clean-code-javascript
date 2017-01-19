@@ -21,9 +21,9 @@ adaptados para JavaScript. Isto não é um guia de estilos. É um guia para se p
 
 Nem todo principio demonstrado deve ser seguido rigorosamente, e ainda menos são os que possuem consenso universal. São orientações e nada mais, entretanto, foram usadas em código durante muitos anos de experiencia coletiva pelos autores de *Código limpo*.
 
-Nosso oficio de engenharia de software tem pouco mais de 50 anos, e ainda estamos aprendendo muito. Quando a arquitetura de software for tão velha quando a própria arquitetura, talvez então tenhamos regras mais rígidas para seguir. Por enquanto, deixe que estas orientações sirvam como critério para se avaliar a qualidade de código JavaScript que tanto você e o seu time produzirem.
+Nosso ofício de engenharia de software tem pouco mais de 50 anos e ainda estamos aprendendo muito. Quando a arquitetura de software for tão velha quando a própria arquitetura, talvez então tenhamos regras mais rígidas para seguir. Por enquanto, deixe que estas orientações sirvam como critério para se avaliar a qualidade de código JavaScript que tanto você e o seu time produzirem.
 
-Mais uma coisa: aprender isto não irá lhe transformar imediatamente em um desenvolvedor de software melhor, e trabalhar com eles por muitos anos não quer dizer que você não cometerá erros. Toda porcão de código começa com um rascunho, como argila molhada sendo moldada em sua forma final. Finalmente, talhamos as imperfeições quando revisamos com nossos colegas. Não se bata pelos primeiros rascunhos que ainda precisam de melhorias. Ao invés, bata em seu código.
+Mais uma coisa: aprender isto não irá lhe transformar imediatamente em um desenvolvedor de software melhor e trabalhar com eles por muitos anos não quer dizer que você não cometerá erros. Toda porcão de código começa com um rascunho, como argila molhada sendo moldada em sua forma final. Finalmente, talhamos as imperfeições quando revisamos com nossos colegas. Não se bata pelos primeiros rascunhos que ainda precisam de melhorias. Ao invés, bata em seu código.
 
 ## **Variáveis**
 ### Use nomes de variáveis que tenham significado e sejam pronunciáveis
@@ -747,7 +747,7 @@ function combine(val1, val2) {
 **[⬆ voltar ao topo](#Índice)**
 
 ### Não otimize demais
-Navegadores modernos fazem muitas otimizações por debaixo dos panos em tempo de execução. Muitas vezes, se você estiver otimizando esta apenas perdendo o seu tempo. [Existem bons recursos](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers) para se verificar onde falta otimização. Foque nesses por enquanto, até que	eles sejam concertados caso seja possível.
+Navegadores modernos fazem muitas otimizações por debaixo dos panos em tempo de execução. Muitas vezes, se você estiver otimizando esta apenas perdendo o seu tempo. [Existem bons recursos](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers) para se verificar onde falta otimização. Foque nesses por enquanto, até que  eles sejam concertados caso seja possível.
 
 **Ruim:**
 ```javascript
@@ -1669,13 +1669,13 @@ try {
 try {
   functionThatMightThrow();
 } catch (error) {
-  // Uma opção (mais chamativa que console.log):
+  // Uma opção (mais chamativa que console.log):
   console.error(error);
-  // Outra opção:
+  // Outra opção:
   notifyUserOfError(error);
-  // Outra opção:
+  // Outra opção:
   reportErrorToService(error);
-  // OU as três!
+  // OU as três!
 }
 ```
 
@@ -1701,13 +1701,13 @@ getdata()
   functionThatMightThrow(data);
 })
 .catch((error) => {
-  // Uma opção (mais chamativa que console.log):
+  // Uma opção (mais chamativa que console.log):
   console.error(error);
-  // Outra opção:
+  // Outra opção:
   notifyUserOfError(error);
-  // Outra opção:
+  // Outra opção:
   reportErrorToService(error);
-  // OU as três!
+  // OU as três!
 });
 ```
 
@@ -1863,7 +1863,7 @@ function hashIt(data) {
 
   // Loop em cada caracter da informação
   for (let i = 0; i < length; i++) {
-    // Pega o código do caracter.
+    // Pega o código do caracter.
     const char = data.charCodeAt(i);
     // Cria a hash
     hash = ((hash << 5) - hash) + char;
